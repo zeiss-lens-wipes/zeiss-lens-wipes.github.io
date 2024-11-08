@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header and Footer with Scrollable Content</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header, .footer {
+            flex-shrink: 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .header img, .footer img {
+            width: 100%;
+        }
+
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+            background-color: #ffffff;
+        }
+
+        .content img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <!-- Top section content (e.g., first image) -->
+        <img src="1.png" alt="Header">
+    </div>
+    <div class="content">
+        <!-- Scrollable middle section (e.g., second image) -->
+        <img src="3.png" alt="Content">
+    </div>
+    <div class="footer">
+        <!-- Bottom section content (e.g., third image) -->
+        <img src="2.png" alt="Footer">
+    </div>
+</div>
+
+</body>
+</html>
